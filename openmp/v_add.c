@@ -35,8 +35,8 @@ void v_add_optimized_chunks(double* x, double* y, double* z) {
 	{
     int numThreads = omp_get_num_threads();
     int curThread = omp_get_thread_num();
-    int chunk = ARRAY_SIZE / num_threads;
-    int rem = ARRAY_SIZE % num_threads;
+    int chunk = ARRAY_SIZE / numThreads;
+    int rem = ARRAY_SIZE % numThreads;
 
     /* loop through chunk */
 		for(int i=curThread * chunk; i<(curThread + 1) * chunk; i++)
