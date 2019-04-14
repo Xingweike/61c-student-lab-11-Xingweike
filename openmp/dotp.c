@@ -20,7 +20,7 @@ double dotp_naive(double* x, double* y) {
 		#pragma omp for
     int temp = 0;
 		for(int i=0; i<ARRAY_SIZE; i++) 
-      temp += = x[i] * y[i]; 
+      temp += x[i] * y[i]; 
 		#pragma omp critical
 			global_sum += temp;
 	}
