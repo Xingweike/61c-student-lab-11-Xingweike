@@ -17,8 +17,8 @@ double dotp_naive(double* x, double* y) {
 	double global_sum = 0.0;
 	#pragma omp parallel
 	{
-		#pragma omp for
     int temp = 0;
+		#pragma omp for
 		for(int i=0; i<ARRAY_SIZE; i++) 
       temp += x[i] * y[i]; 
 		#pragma omp critical
